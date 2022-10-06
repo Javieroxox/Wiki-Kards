@@ -77,7 +77,7 @@ class _Tab_AlemaniaState extends State<Tab_Alemania> {
                           ),
                       ),        
                       Container(
-                        padding: EdgeInsets.only(left: 70),
+                        padding: EdgeInsets.all(5),
                         margin: EdgeInsets.only(top: 5),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -90,15 +90,33 @@ class _Tab_AlemaniaState extends State<Tab_Alemania> {
                                   if (_stackindex < 10) {
                                     _grado = 0;
                                   } else if
-                                     (_stackindex > 20 && _stackindex < 30){
+                                     (_stackindex > 10 && _stackindex < 20){
                                       _grado = 1;
                                   } else {
-                                    if (_stackindex > 30) 
+                                    if (_stackindex > 20) 
                                       _grado = 2;
                                   }
                                 });
                               }, 
-                              child: Text('Partidas Jugadas'),
+                              child: Text('Partidas Ganadas'),
+                            ),
+                            ElevatedButton(
+                              onPressed: (){
+                                setState(() {
+                                  if (_stackindex < 100 && _stackindex > 0)
+                                    _stackindex = _stackindex - 1;
+                                  if (_stackindex < 10) {
+                                    _grado = 0;
+                                  } else if
+                                     (_stackindex > 10 && _stackindex < 20){
+                                      _grado = 1;
+                                  } else {
+                                    if (_stackindex > 20) 
+                                      _grado = 2;
+                                  }
+                                });
+                              }, 
+                              child: Text('Partidas Perdidas'),
                             ),
                           ],
                         ),
