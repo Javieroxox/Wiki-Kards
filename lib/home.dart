@@ -17,6 +17,23 @@ class Home extends StatelessWidget {
     return Scaffold(
       appBar : AppBar(
         title: Text('C1 DAM020-2022-2 - {Kards Wiki}', style: TextStyle(fontSize: 16),),
+        bottom: PreferredSize(
+          preferredSize: Size.fromHeight(10.0),
+          child: Container(
+            alignment: Alignment.centerLeft,
+            padding: EdgeInsets.only(bottom: 5,left: 70),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Claudio Hernandez Fernandez',
+                  style: TextStyle(color: Colors.white, fontSize: 14.0),
+                )
+              ],
+            ),
+          ),
+        ),
         backgroundColor: Colors.green[300],
         actions: [Center(child: Padding(padding: EdgeInsets.all(5))),Icon(MdiIcons.tank)],
       ),
